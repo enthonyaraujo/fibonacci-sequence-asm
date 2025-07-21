@@ -23,9 +23,9 @@ A espiral de Fibonacci é uma representação visual da sequência e sua relaç�
 ### Como compilar: 
 
 ```bash
-    nasm -f elf32 fibonacci.asm
-    ld -m elf_i386 fibonacci.o -o fibonacci
-    ./fibonacci
+nasm -f elf32 fibonacci.asm
+ld -m elf_i386 fibonacci.o -o fibonacci
+./fibonacci
 ```
 
 ### Dependências: 
@@ -34,14 +34,14 @@ A espiral de Fibonacci é uma representação visual da sequência e sua relaç�
 
 Debian/Ubuntu
 ```bash
-    sudo apt install nasm
+sudo apt install nasm
 ```
 
 ArchLinux
 ```bash
-    sudo pacman -S nasm
+sudo pacman -S nasm
 ```
 Fedora
 ```bash
-    sudo dnf install nasm
+sudo dnf install nasm
 ```
