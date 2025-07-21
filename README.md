@@ -5,8 +5,8 @@
 
 ### Fórmula da Sequência de Fibonacci
 
-![Fórmula da Sequência de Fibonacci](formula-geral.png)
 
+![Fórmula da Sequência de Fibonacci](formula-geral.png)
 *Onde:*
 * $F(n)$ é o n-ésimo termo da sequência.
 * $F(n+1)$ é o termo anterior.
@@ -18,3 +18,30 @@
 A espiral de Fibonacci é uma representação visual da sequência e sua relação com a proporção áurea. 
 
 ![Espiral de Fibonacci](sequencia-de-fibonacci-em-uma-aspiral.jpeg)
+
+
+### Como compilar: 
+
+```bash
+    nasm -f elf32 fibonacci.asm
+    ld -m elf_i386 fibonacci.o -o fibonacci
+    ./fibonacci
+```
+
+### Dependências: 
+
+[Nasm](https://www.nasm.us/)
+
+Debian/Ubuntu
+```bash
+    sudo apt install nasm
+```
+
+ArchLinux
+```bash
+    sudo pacman -S nasm
+```
+Fedora
+```bash
+    sudo dnf install nasm
+```
