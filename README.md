@@ -1,3 +1,20 @@
 
-#  Sequência de Fibonacci
-## Este Trabalho implementa o Tema 3 de uma atividade prática de Arquitetura e Organização de Computadores. O programa, desenvolvido em linguagem Assembly, tem como objetivo gerar os  N primeiros termos da sequência de Fibonacci. O valor de  N é pré-definido no código. Os termos da sequência são armazenados em um vetor na memória e, ao final da execução, são exibidos no console.
+# Sequência de Fibonacci
+
+## Este Trabalho implementa o Tema 3 de uma atividade prática de Arquitetura e Organização de Computadores. O programa, desenvolvido em linguagem Assembly, tem como objetivo gerar os N primeiros termos da sequência de Fibonacci. O valor de N é pré-definido no código. Os termos da sequência são armazenados em um vetor na memória e, ao final da execução, são exibidos no console.
+
+### Fórmula da Sequência de Fibonacci
+
+![Fórmula da Sequência de Fibonacci](formula-geral.png)
+
+*Onde:*
+* $F(n)$ é o n-ésimo termo da sequência.
+* $F(n+1)$ é o termo anterior.
+* $F(n+2)$ é o termo dois antes.
+* Os termos iniciais são $F(1) = 0$ e $F(2) = 1$.
+
+### A Espiral de Fibonacci
+
+A espiral de Fibonacci é uma representação visual da sequência e sua relação com a proporção áurea. 
+
+![Espiral de Fibonacci](sequencia-de-fibonacci-em-uma-aspiral.jpeg)
