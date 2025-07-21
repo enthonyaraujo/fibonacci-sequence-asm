@@ -6,7 +6,7 @@
 ### Fórmula da Sequência de Fibonacci
 
 
-![Fórmula da Sequência de Fibonacci](formula-geral.png)
+![Fórmula da Sequência de Fibonacci](/assets/formula-geral.png)
 *Onde:*
 * $F(n)$ é o n-ésimo termo da sequência.
 * $F(n+1)$ é o termo anterior.
@@ -17,7 +17,7 @@
 
 A espiral de Fibonacci é uma representação visual da sequência e sua relação com a proporção áurea. 
 
-![Espiral de Fibonacci](sequencia-de-fibonacci-em-uma-aspiral.jpeg)
+![Espiral de Fibonacci](/assets/sequencia-de-fibonacci-em-uma-aspiral.jpeg)
 
 
 ### Como compilar: 
