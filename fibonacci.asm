@@ -9,7 +9,7 @@ section .text
     global _start
 
 _start:
-    mov ecx, 0          ; contador i = 0
+    mov ecx, 1          ; contador i = 1
 
 print_loop:
     cmp ecx, [n]
