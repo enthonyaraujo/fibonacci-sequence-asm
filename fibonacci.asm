@@ -1,9 +1,9 @@
 section .data
-    n dd 10          ; valor máximo de n
+    n dd 15          ; valor máximo de n
     newline db 10       ; caractere de nova linha '\n'
 
 section .bss
-    num resb 4          ; buffer para armazenar número convertido em string (até 3 dígitos + null)
+    num resb 4          ; reserva 4 bytes para armazenar um número convertido em string
 
 section .text
     global _start
@@ -13,7 +13,7 @@ _start:
 
 print_loop:
     cmp ecx, [n]
-    ja  end_program     ; se i > n, termina
+    ja  sair     ; se i > n, termina o loop
 
     mov eax, ecx        ; calcula Fibonacci(i)
     call fibonacci      ; resultado em EAX
@@ -23,7 +23,7 @@ print_loop:
     mov edi, num + 3     ; aponta para o final do buffer
     mov byte [edi], 0    ; null terminator
 
-convert_digit:
+converter_digito:
     xor edx, edx
     mov ebx, 10
     div ebx             ; EAX / 10, resto em EDX
@@ -31,7 +31,7 @@ convert_digit:
     dec edi
     mov [edi], dl
     test eax, eax
-    jnz convert_digit
+    jnz converter_digito
 
     ; imprime número
     mov eax, 4          ; syscall: sys_write
@@ -55,7 +55,7 @@ convert_digit:
     inc ecx             ; i++
     jmp print_loop
 
-end_program:
+sair:
     ; sair do programa
     mov eax, 1          ; syscall: sys_exit
     xor ebx, ebx
@@ -70,39 +70,33 @@ fibonacci:
     push    ecx
     push    edx
 
-    cmp     eax, 0
-    je      .fib_zero
     cmp     eax, 1
     je      .fib_one
+    cmp     eax, 2
+    je      .fib_one
 
-    mov     ebx, 0      ; Rf1
-    mov     ecx, 1      ; Rf2
-    mov     edx, eax    ; Rn
+    mov     ebx, 1      ; Fib(1)
+    mov     ecx, 1      ; Fib(2)
+    mov     edx, 3      ; começa do 3º termo
 
 .loop:
-    sub     edx, 2
-    js      .finish
+    cmp     edx, eax
+    jg      .done_calc
 
-    add     ebx, ecx
-    add     ecx, ebx
+    mov     esi, ecx    ; salva Fib(n-1)
+    add     ecx, ebx    ; Fib(n) = Fib(n-1) + Fib(n-2)
+    mov     ebx, esi    ; Fib(n-2) = Fib(n-1)
+
+    inc     edx
     jmp     .loop
 
-.finish:
-    test    edx, 1
-    jz      .even
+.done_calc:
     mov     eax, ecx
     jmp     .done
 
-.even:
-    mov     eax, ebx
-    jmp     .done
-
-.fib_zero:
-    xor eax, eax
-    jmp .done
-
 .fib_one:
-    mov eax, 1
+    mov     eax, 1
+    jmp     .done
 
 .done:
     pop     edx

@@ -11,7 +11,7 @@
 * $F(n)$ é o n-ésimo termo da sequência.
 * $F(n+1)$ é o termo anterior.
 * $F(n+2)$ é o termo dois antes.
-* Os termos iniciais são $F(1) = 0$ e $F(2) = 1$.
+* Os termos iniciais são $F(1) = 1$ e $F(2) = 1$.
 
 ### A Espiral de Fibonacci
 
