@@ -22,6 +22,12 @@ A espiral de Fibonacci é uma representação visual da sequência e sua relaç�
 
 ### Como compilar: 
 
+* Compilando usando um compilador online:
+
+https://www.jdoodle.com/compile-assembler-nasm-online
+
+
+* Compilando usando o [Nasm](https://www.nasm.us/):
 ```bash
 nasm -f elf32 fibonacci.asm
 ld -m elf_i386 fibonacci.o -o fibonacci
