@@ -71,34 +71,34 @@ fibonacci:
     push    edx
 
     cmp     eax, 1
-    je      .fib_one
+    je      .fib_um
     cmp     eax, 2
-    je      .fib_one
+    je      .fib_um
 
     mov     ebx, 1      ; Fib(1)
     mov     ecx, 1      ; Fib(2)
     mov     edx, 3      ; começa do 3º termo
 
-.loop:
+.inicio_loop:
     cmp     edx, eax
-    jg      .done_calc
+    jg      .fim_calculo
 
     mov     esi, ecx    ; salva Fib(n-1)
     add     ecx, ebx    ; Fib(n) = Fib(n-1) + Fib(n-2)
     mov     ebx, esi    ; Fib(n-2) = Fib(n-1)
 
     inc     edx
-    jmp     .loop
+    jmp     .inicio_loop
 
-.done_calc:
+.fim_calculo:
     mov     eax, ecx
-    jmp     .done
+    jmp     .fim
 
-.fib_one:
+.fib_um:
     mov     eax, 1
-    jmp     .done
+    jmp     .fim
 
-.done:
+.fim:
     pop     edx
     pop     ecx
     pop     ebx
