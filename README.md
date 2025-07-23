@@ -7,6 +7,7 @@
 
 
 ![Fórmula da Sequência de Fibonacci](/assets/formula-geral.png)
+
 *Onde:*
 * $F(n)$ é o n-ésimo termo da sequência.
 * $F(n+1)$ é o termo anterior.
