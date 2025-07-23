@@ -1,6 +1,6 @@
 
 section .data
-    n dd 30             ; Define o valor máximo de n. Aqui queremos calcular os n primeiros números da sequência de Fibonacci.
+    n dd 10             ; Define o valor máximo de n. Aqui queremos calcular os n primeiros números da sequência de Fibonacci.
                          ; 'dd' significa 'define doubleword' (define 4 bytes).
     newline db 10        ; Define o caractere de nova linha (\n, código ASCII 10). 'db' significa 'define byte' (1 byte).
 
