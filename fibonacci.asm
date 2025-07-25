@@ -102,6 +102,7 @@ fibonacci:
     mov eax, ecx         ; Resultado final em EAX
     jmp .fim
 
+
 .fib_um:
     mov eax, 1           ; F(1) ou F(2) = 1
     jmp .fim
