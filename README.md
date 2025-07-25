@@ -6,7 +6,6 @@
 
 [Relatório](/assets/Relatório%20Atividade%20Prática%203ª%20Unidade-%20Sequência%20de%20Fibonacci.pdf)
 
-[Slide](/assets/Slide%20Sequência%20de%20Fiboancci%20-%20Assembly.pdf)
 
 [Instruções do Trabalho](/assets/Trabalho_Final_Arquitetura.pdf)
 
